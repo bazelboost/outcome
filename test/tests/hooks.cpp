@@ -1,5 +1,5 @@
 /* Unit testing for outcomes
-(C) 2013-2023 Niall Douglas <http://www.nedproductions.biz/> (14 commits)
+(C) 2013-2024 Niall Douglas <http://www.nedproductions.biz/> (14 commits)
 
 
 Boost Software License - Version 1.0 - August 17th, 2003
@@ -45,7 +45,6 @@ namespace hook_test
   // Use the error_code type as the ADL bridge for the hooks by creating a type here
   struct error_code : public boost::system::error_code
   {
-    using boost::system::error_code::error_code;
     error_code() = default;
     error_code(boost::system::error_code ec)  // NOLINT
     : boost::system::error_code(ec)
